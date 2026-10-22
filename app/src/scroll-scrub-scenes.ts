@@ -1,4 +1,4 @@
-import { createElement } from "react";
+﻿import { createElement } from "react";
 import type { ScrollScrubScene, ScrollScrubTheme } from "@/components/scroll-scrub/scroll-scrub";
 
 export const scrollScrubTheme: ScrollScrubTheme = {
@@ -12,6 +12,7 @@ export const scrollScrubScenes: ScrollScrubScene[] = [
   {
     id: "orbit-core",
     label: "Intro",
+    portrait: "/assets/world/chaitanya-portrait.png",
     poster: "/assets/world/scene-01-poster.png",
     mobilePoster: "/assets/world/scene-01-mobile-poster.png",
     clip: "/assets/world/scene-01.mp4",

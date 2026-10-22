@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" fill="none">
+  <defs><linearGradient id="bg" x1="70" y1="36" x2="860" y2="568" gradientUnits="userSpaceOnUse"><stop stop-color="#DCE5D8"/><stop offset="1" stop-color="#A8B7A5"/></linearGradient><linearGradient id="land" x1="257" y1="154" x2="697" y2="457" gradientUnits="userSpaceOnUse"><stop stop-color="#F1C77C"/><stop offset=".46" stop-color="#D87A4D"/><stop offset="1" stop-color="#647B68"/></linearGradient></defs>
+  <path fill="url(#bg)" d="M0 0h960v600H0z"/>
+  <path stroke="#26382E" stroke-opacity=".1" d="M0 100h960M0 200h960M0 300h960M0 400h960M0 500h960M120 0v600M240 0v600M360 0v600M480 0v600M600 0v600M720 0v600M840 0v600"/>
+  <rect x="73" y="57" width="814" height="487" rx="24" fill="#F8F5EC" stroke="#26382E" stroke-opacity=".14"/>
+  <rect x="99" y="83" width="762" height="430" rx="14" fill="#D7E1D2"/>
+  <path d="m99 307 126-107 94 48 98-92 94 79 91-82 107 104 152-69v325H99V307Z" fill="#7F9B7B" fill-opacity=".48"/>
+  <path d="m99 369 110-84 114 93 91-103 110 110 89-91 125 82 123-115v252H99V369Z" fill="url(#land)"/>
+  <path d="m99 419 143-79 83 51 92-109 88 93 114-62 96 65 146-68v203H99V419Z" fill="#668269" fill-opacity=".85"/>
+  <path stroke="#FFF8E9" stroke-opacity=".82" stroke-width="3" d="m247 340 83 51 92-109 88 93 114-62 96 65"/>
+  <path stroke="#25382D" stroke-opacity=".25" stroke-dasharray="8 9" stroke-width="2" d="m171 168 110-44 92 49 101-42 97 55 111-36 109 52"/>
+  <circle cx="422" cy="282" r="15" fill="#FFF8E9"/><circle cx="422" cy="282" r="7" fill="#D85F37"/>
+  <circle cx="624" cy="313" r="15" fill="#FFF8E9"/><circle cx="624" cy="313" r="7" fill="#D85F37"/>
+  <circle cx="716" cy="378" r="15" fill="#FFF8E9"/><circle cx="716" cy="378" r="7" fill="#D85F37"/>
+  <rect x="117" y="101" width="210" height="40" rx="20" fill="#FFFCF6" fill-opacity=".9"/>
+  <circle cx="140" cy="121" r="6" fill="#D85F37"/><path fill="#35463A" fill-opacity=".64" d="M157 117h148v8H157z"/>
+  <rect x="725" y="430" width="111" height="63" rx="12" fill="#FFFCF6" fill-opacity=".92"/>
+  <path fill="#6C8C72" d="M744 469h9v11h-9zM759 458h9v22h-9zM774 448h9v32h-9z"/>
+  <path fill="#35463A" fill-opacity=".6" d="M797 452h23v6h-23zM797 465h23v6h-23z"/>
+</svg>

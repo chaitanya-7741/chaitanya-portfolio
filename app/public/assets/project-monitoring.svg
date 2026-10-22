@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="62" y1="35" x2="873" y2="579" gradientUnits="userSpaceOnUse"><stop stop-color="#F5F0E6"/><stop offset="1" stop-color="#E4DAC9"/></linearGradient>
+    <linearGradient id="line" x1="145" y1="447" x2="851" y2="165" gradientUnits="userSpaceOnUse"><stop stop-color="#E87B4B"/><stop offset="1" stop-color="#B54E2B"/></linearGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h960v600H0z"/>
+  <path stroke="#171714" stroke-opacity=".08" d="M0 100h960M0 200h960M0 300h960M0 400h960M0 500h960M120 0v600M240 0v600M360 0v600M480 0v600M600 0v600M720 0v600M840 0v600"/>
+  <rect x="91" y="76" width="778" height="448" rx="24" fill="#FFFCF6" stroke="#171714" stroke-opacity=".12"/>
+  <rect x="91" y="76" width="778" height="58" rx="24" fill="#201F1A"/>
+  <path fill="#201F1A" d="M91 108h778v26H91z"/>
+  <circle cx="126" cy="105" r="7" fill="#EF7646"/><circle cx="151" cy="105" r="7" fill="#E4B46D"/><circle cx="176" cy="105" r="7" fill="#9AA48C"/>
+  <rect x="215" y="96" width="174" height="18" rx="9" fill="#F5F0E6" fill-opacity=".15"/>
+  <rect x="119" y="164" width="218" height="103" rx="15" fill="#F5F0E6"/>
+  <rect x="357" y="164" width="218" height="103" rx="15" fill="#F5F0E6"/>
+  <rect x="595" y="164" width="246" height="103" rx="15" fill="#F5F0E6"/>
+  <rect x="141" y="185" width="74" height="9" rx="4.5" fill="#77766E" fill-opacity=".55"/>
+  <rect x="141" y="211" width="120" height="28" rx="8" fill="#201F1A"/>
+  <rect x="379" y="185" width="84" height="9" rx="4.5" fill="#77766E" fill-opacity=".55"/>
+  <rect x="379" y="211" width="97" height="28" rx="8" fill="#201F1A"/>
+  <rect x="617" y="185" width="96" height="9" rx="4.5" fill="#77766E" fill-opacity=".55"/>
+  <rect x="617" y="211" width="142" height="28" rx="8" fill="#201F1A"/>
+  <rect x="119" y="291" width="722" height="198" rx="16" fill="#F8F5EE"/>
+  <path stroke="#171714" stroke-opacity=".09" d="M150 330h680M150 370h680M150 410h680M150 450h680"/>
+  <path d="m151 431 81-27 72 12 75-66 71 28 76-51 73 18 75-80 78 19" stroke="url(#line)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="604" cy="327" r="8" fill="#F5F0E6" stroke="#B54E2B" stroke-width="5"/>
+  <rect x="737" y="321" width="82" height="28" rx="14" fill="#F8E6D9"/>
+  <rect x="753" y="332" width="51" height="6" rx="3" fill="#B54E2B"/>
+</svg>

@@ -26,6 +26,7 @@ export interface ScrollScrubScene {
   linger?: number;
   objectPosition?: string;
   mobileObjectPosition?: string;
+  portrait?: string;
 }
 
 export interface ScrollScrubConnector {
@@ -524,6 +525,34 @@ export function ScrollScrub({
       }
     };
 
+    // Keep the portrait responsive to pointer movement without turning it around.
+    const portraitFrames = [...root.querySelectorAll<HTMLElement>("[data-ch-portrait-frame]")];
+    const portraitCleanup: (() => void)[] = [];
+    for (const portraitFrame of portraitFrames) {
+      const onPortraitPointerMove = (event: PointerEvent) => {
+        const rect = portraitFrame.getBoundingClientRect();
+        const x = clamp((event.clientX - rect.left) / Math.max(rect.width, 1));
+        const y = clamp((event.clientY - rect.top) / Math.max(rect.height, 1));
+        const rotateY = (x - 0.5) * 12;
+        const rotateX = (0.5 - y) * 8;
+        portraitFrame.style.setProperty("--ch-rotate-y", `${rotateY}deg`);
+        portraitFrame.style.setProperty("--ch-rotate-x", `${rotateX}deg`);
+        portraitFrame.style.setProperty("--ch-pointer-x", `${x * 100}%`);
+        portraitFrame.style.setProperty("--ch-pointer-y", `${y * 100}%`);
+      };
+      const onPortraitPointerLeave = () => {
+        portraitFrame.style.setProperty("--ch-rotate-y", "0deg");
+        portraitFrame.style.setProperty("--ch-rotate-x", "0deg");
+        portraitFrame.style.setProperty("--ch-pointer-x", "50%");
+        portraitFrame.style.setProperty("--ch-pointer-y", "35%");
+      };
+      portraitFrame.addEventListener("pointermove", onPortraitPointerMove);
+      portraitFrame.addEventListener("pointerleave", onPortraitPointerLeave);
+      portraitCleanup.push(() => {
+        portraitFrame.removeEventListener("pointermove", onPortraitPointerMove);
+        portraitFrame.removeEventListener("pointerleave", onPortraitPointerLeave);
+      });
+    }
     controllerRef.current = {
       jumpToSection(index) {
         const segment = runtime.find(
@@ -559,6 +588,7 @@ export function ScrollScrub({
 
     return () => {
       destroyed = true;
+      for (const cleanupPortrait of portraitCleanup) cleanupPortrait();
       controllerRef.current = null;
       window.cancelAnimationFrame(frame);
       window.removeEventListener("scroll", onScroll);
@@ -603,7 +633,7 @@ export function ScrollScrub({
             };
             return (
               <figure
-                className={`scroll-scrub__layer scroll-scrub__layer--${segment.kind}`}
+                className={`scroll-scrub__layer scroll-scrub__layer--${segment.kind}${segment.scene?.portrait ? " scroll-scrub__layer--portrait" : ""}`}
                 data-scroll-scrub-layer=""
                 key={segment.key}
                 style={layerStyle}
@@ -624,6 +654,20 @@ export function ScrollScrub({
                     src={segment.poster}
                   />
                 </picture>
+                {segment.scene?.portrait ? (
+                  <div className="scroll-scrub__portrait-frame" data-ch-portrait-frame="">
+                    <img className="scroll-scrub__portrait" src={segment.scene.portrait} alt="Portrait of Chaitanya" draggable={false} />
+                    <span className="scroll-scrub__portrait-orbit scroll-scrub__portrait-orbit--one" aria-hidden="true" />
+                    <span className="scroll-scrub__portrait-orbit scroll-scrub__portrait-orbit--two" aria-hidden="true" />
+                    <span className="scroll-scrub__portrait-caption" aria-hidden="true">CH / INTERACTIVE PORTRAIT</span>
+                    <div className="scroll-scrub__hero-panel scroll-scrub__hero-panel--dreamer" aria-hidden="true"><span className="scroll-scrub__hero-panel-label">DREAMER</span><span>&gt; Build impact</span><span>&gt; Work globally</span><strong>&gt; Keep learning</strong><i className="scroll-scrub__hero-panel-lights" /></div>
+                    <div className="scroll-scrub__hero-panel scroll-scrub__hero-panel--developer" data-ch-hero-panels="" aria-hidden="true"><span className="scroll-scrub__hero-panel-label">DEVELOPER</span><span>&gt; Code()</span><span>&gt; Create()</span><span>&gt; Solve()</span><strong>&gt; Repeat()</strong><i className="scroll-scrub__hero-panel-lights" /></div>
+                    <div className="scroll-scrub__hero-panel scroll-scrub__hero-panel--learner" aria-hidden="true"><span className="scroll-scrub__hero-panel-label">LEARNER</span><span>&gt; New problems</span><span>&gt; Better solutions</span><strong>&gt; Continuous growth</strong><i className="scroll-scrub__hero-panel-lights" /></div>
+                    <div className="scroll-scrub__hero-chip scroll-scrub__hero-chip--react" aria-hidden="true">REACT</div>
+                    <div className="scroll-scrub__hero-chip scroll-scrub__hero-chip--python" aria-hidden="true">PY</div>
+                    <div className="scroll-scrub__hero-chip scroll-scrub__hero-chip--data" aria-hidden="true">AI / DATA</div>
+                  </div>
+                ) : null}
               </figure>
             );
           })}
