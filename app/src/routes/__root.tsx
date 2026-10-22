@@ -22,7 +22,8 @@ declare const __HF_DESIGN_INSPECTOR__: boolean;
 
 // Built-in defaults for any field that isn't set in app-meta.json.
 const DEFAULT_TITLE = "Chaitanya Portfolio";
-const DEFAULT_DESCRIPTION = "Full-stack developer and software engineer portfolio.";
+const DEFAULT_DESCRIPTION =
+  "A computer science student building full-stack applications, AI/ML systems, and practical software.";
 
 type AppMeta = {
   og_title?: string | null;

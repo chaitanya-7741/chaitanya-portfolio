@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="55" y1="28" x2="895" y2="574" gradientUnits="userSpaceOnUse"><stop stop-color="#F4E7D2"/><stop offset="1" stop-color="#E5C8A2"/></linearGradient>
+    <linearGradient id="dish" x1="343" y1="193" x2="630" y2="427" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFDF7"/><stop offset="1" stop-color="#E8DDCC"/></linearGradient>
+    <radialGradient id="food" cx="0" cy="0" r="1" gradientTransform="matrix(152 95 -84 135 450 264)" gradientUnits="userSpaceOnUse"><stop stop-color="#E9A25D"/><stop offset=".55" stop-color="#B84E32"/><stop offset="1" stop-color="#6E3929"/></radialGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h960v600H0z"/>
+  <path stroke="#583A2A" stroke-opacity=".08" d="M0 100h960M0 200h960M0 300h960M0 400h960M0 500h960M120 0v600M240 0v600M360 0v600M480 0v600M600 0v600M720 0v600M840 0v600"/>
+  <rect x="75" y="55" width="810" height="490" rx="24" fill="#FCF8EF" stroke="#68412D" stroke-opacity=".14"/>
+  <rect x="75" y="55" width="810" height="58" rx="24" fill="#4A3024"/>
+  <path fill="#4A3024" d="M75 84h810v29H75z"/>
+  <path fill="#F5E7D0" d="M115 76h17v17h-17z"/><path fill="#D67B43" d="M119 80h9v9h-9z"/>
+  <path fill="#FFF8EC" d="M145 76h118v8H145z"/><path fill="#FFF8EC" fill-opacity=".52" d="M145 89h83v5h-83z"/>
+  <rect x="588" y="75" width="64" height="18" rx="9" fill="#FFF8EC" fill-opacity=".12"/>
+  <rect x="663" y="75" width="68" height="18" rx="9" fill="#FFF8EC" fill-opacity=".12"/>
+  <rect x="748" y="69" width="105" height="30" rx="15" fill="#D97845"/>
+  <path fill="#FFF8EC" d="M768 80h65v7h-65z"/>
+  <rect x="108" y="144" width="346" height="361" rx="17" fill="#F1E6D5"/>
+  <path fill="#9A4E32" d="M145 187h187v13H145z"/>
+  <path fill="#4A3024" d="M145 221h248v37H145z"/>
+  <path fill="#4A3024" d="M145 266h210v34H145z"/>
+  <path fill="#9B7860" d="M146 322h254v8H146zM146 340h216v8H146zM146 358h232v8H146z"/>
+  <rect x="145" y="398" width="148" height="44" rx="22" fill="#4A3024"/>
+  <path fill="#FFF8EC" d="M169 416h96v8h-96z"/>
+  <circle cx="669" cy="326" r="173" fill="#D5B28C"/>
+  <circle cx="669" cy="326" r="150" fill="url(#dish)" stroke="#FFFDF7" stroke-width="10"/>
+  <circle cx="669" cy="326" r="119" fill="#F5E8D5"/>
+  <circle cx="669" cy="326" r="91" fill="url(#food)"/>
+  <path stroke="#EBC77C" stroke-linecap="round" stroke-width="18" d="M608 297c28-37 73-45 114-18"/>
+  <path stroke="#F1D69A" stroke-linecap="round" stroke-width="14" d="M612 351c33 32 73 33 111 7"/>
+  <path fill="#5B7A48" d="M651 264c-7-22 7-39 29-42 8 22-3 39-29 42Z"/>
+  <path fill="#527440" d="M699 280c6-21 25-29 43-19-5 21-21 29-43 19Z"/>
+  <path fill="#78944F" d="M625 341c-20-10-23-30-7-45 20 11 23 28 7 45Z"/>
+  <circle cx="691" cy="343" r="9" fill="#F5D88E"/><circle cx="656" cy="312" r="8" fill="#F7E5BF"/>
+  <rect x="536" y="472" width="270" height="27" rx="13.5" fill="#FFF8EC" fill-opacity=".78"/>
+  <circle cx="554" cy="486" r="5" fill="#D97845"/>
+  <path fill="#755039" d="M568 482h129v7H568z"/>
+</svg>
